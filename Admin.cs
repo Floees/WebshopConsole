@@ -237,7 +237,7 @@ namespace webshopsimpler
                         goto here;
                 }
             }
-        } //longstringprintcheck
+        }
 
         static User UserEditor(User u)
         {

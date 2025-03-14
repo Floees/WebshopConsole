@@ -35,14 +35,21 @@ namespace webshopsimpler
                 Console.ForegroundColor = ConsoleColor.Gray;
                 switch (Console.ReadKey().Key)
                 {
-                    case ConsoleKey.D3:
-                        //Search
-                        break;
                     case ConsoleKey.D4:
-                        //Login
+                        StartPage.Search("ProductPage");
                         break;
                     case ConsoleKey.D5:
-                        //SignUp
+                        LoginPage.Login();
+                        break;
+                    case ConsoleKey.D6:
+                        if (Program.user == false)
+                        {
+                            SignUp.SignUpPage();
+                        }
+                        if (Program.user == true)
+                        {
+                            CartPage.UserCart(Program.CurrentUser);
+                        }
                         break;
                     case ConsoleKey.W:
                         if (amount < p.Stock)
@@ -102,14 +109,21 @@ namespace webshopsimpler
                 Console.Write("Amount: " + amount + " [W]+[S]-");
                 switch (Console.ReadKey().Key)
                 {
-                    case ConsoleKey.D3:
-                        //Search
-                        break;
                     case ConsoleKey.D4:
-                        //Login
+                        StartPage.Search("ProductPage");
                         break;
                     case ConsoleKey.D5:
-                        //SignUp
+                        LoginPage.Login();
+                        break;
+                    case ConsoleKey.D6:
+                        if (Program.user == false)
+                        {
+                            SignUp.SignUpPage();
+                        }
+                        if (Program.user == true)
+                        {
+                            CartPage.UserCart(Program.CurrentUser);
+                        }
                         break;
                     case ConsoleKey.W:
                         if (amount < p.Stock)

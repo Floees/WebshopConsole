@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using webshopsimpler.Models;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace webshopsimpler
 {
@@ -74,6 +75,25 @@ namespace webshopsimpler
                     case ConsoleKey.Backspace:
                         browsing = false;
                         CategoriesPage.CatPage();
+                        break;
+                    case ConsoleKey.D4:
+                        browsing = false;
+                        StartPage.Search("BrowseAll");
+                        break;
+                    case ConsoleKey.D5:
+                        browsing = false;
+                        LoginPage.Login();
+                        break;
+                    case ConsoleKey.D6:
+                        browsing = false;
+                        if (Program.user == false)
+                        {
+                            SignUp.SignUpPage();
+                        }
+                        if (Program.user == true)
+                        {
+                            CartPage.UserCart(Program.CurrentUser);
+                        }
                         break;
                     default:
                         break;
@@ -156,6 +176,25 @@ namespace webshopsimpler
                         browsing = false;
                         CategoriesPage.CatPage();
                         break;
+                    case ConsoleKey.D4:
+                        browsing = false;
+                        StartPage.Search("BrowseAll");
+                        break;
+                    case ConsoleKey.D5:
+                        browsing = false;
+                        LoginPage.Login();
+                        break;
+                    case ConsoleKey.D6:
+                        browsing = false;
+                        if (Program.user == false)
+                        {
+                            SignUp.SignUpPage();
+                        }
+                        if (Program.user == true)
+                        {
+                            CartPage.UserCart(Program.CurrentUser);
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -178,6 +217,7 @@ namespace webshopsimpler
             {
                 Console.SetCursorPosition(80, 21);
                 Console.WriteLine("nothing was found press any key to go back");
+                Console.ReadKey();
                 return;
             }
 
@@ -234,6 +274,25 @@ namespace webshopsimpler
                     case ConsoleKey.Backspace:
                         browsing = false;
                         CategoriesPage.CatPage();
+                        break;
+                    case ConsoleKey.D4:
+                        browsing = false;
+                        StartPage.Search("BrowseAll");
+                        break;
+                    case ConsoleKey.D5:
+                        browsing = false;
+                        LoginPage.Login();
+                        break;
+                    case ConsoleKey.D6:
+                        browsing = false;
+                        if (Program.user == false)
+                        {
+                            SignUp.SignUpPage();
+                        }
+                        if (Program.user == true)
+                        {
+                            CartPage.UserCart(Program.CurrentUser);
+                        }
                         break;
                     default:
                         break;

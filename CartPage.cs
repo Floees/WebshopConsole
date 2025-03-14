@@ -212,7 +212,6 @@ namespace webshopsimpler
                             db.Update(p);
                             db.SaveChanges();
                         }
-                        //db.SaveChanges();
                         Console.Clear();
                         Console.SetCursorPosition(90, 15);
                         Console.WriteLine("Transaction successfull, Your items will arrive soon!");
@@ -225,9 +224,6 @@ namespace webshopsimpler
                     default:
                         goto missclick;
                 }
-
-                //save payment method
-
             }
         }
 

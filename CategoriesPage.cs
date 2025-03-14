@@ -26,13 +26,20 @@ namespace webshopsimpler
                     BrowseAllPage.BrowseAll(GetProductCategory(2).Id, GetProductCategory(2).CategoryName);
                     break;
                 case ConsoleKey.D4:
-                    //Search
+                    StartPage.Search("Categories");
                     break;
                 case ConsoleKey.D5:
-                    //Login
+                    LoginPage.Login();
                     break;
                 case ConsoleKey.D6:
-                    //SignUp
+                    if (Program.user == false)
+                    {
+                        SignUp.SignUpPage();
+                    }
+                    if (Program.user == true)
+                    {
+                        CartPage.UserCart(Program.CurrentUser);
+                    }
                     break;
                 case ConsoleKey.D7:
                     BrowseAllPage.BrowseAll();

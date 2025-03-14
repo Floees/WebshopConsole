@@ -29,9 +29,7 @@ namespace webshopsimpler
                     Search("StartPage");
                     break;
                 case ConsoleKey.D5:
-                    {
-                        LoginPage.Login();
-                    }
+                    LoginPage.Login();
                     break;
                 case ConsoleKey.D6:
                     if (Program.user == false)
@@ -93,7 +91,7 @@ namespace webshopsimpler
 
         }
 
-        static void Search(string scene)
+        public static void Search(string scene)
         {
             var searchbar = Program.allwindows.Where(w => w.Desc.Equals("Searchbar")).FirstOrDefault();
             searchbar.TextRows[0] = "                      ";
@@ -101,6 +99,10 @@ namespace webshopsimpler
             if (scene == "StartPage")
             {
                 PeepoGladStart();
+            }
+            if (scene == "Categories") 
+            {
+                CategoriesPage.PeepoGladCat();
             }
             Console.SetCursorPosition(91, 6);
             string search = Console.ReadLine();
